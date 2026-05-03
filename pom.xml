@@ -15,7 +15,7 @@
 	<description>MCP Client for SQLite Database</description>
 	<properties>
 		<java.version>21</java.version>
-		<spring-ai.version>2.0.0-M5</spring-ai.version>
+		<spring-ai.version>1.1.5</spring-ai.version>
 	</properties>
 	<dependencies>
 		<dependency>

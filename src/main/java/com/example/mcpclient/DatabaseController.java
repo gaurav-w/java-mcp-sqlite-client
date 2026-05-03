@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -15,8 +16,8 @@ public class DatabaseController {
 
     private final McpAsyncClient mcpClient;
 
-    public DatabaseController(McpAsyncClient mcpClient) {
-        this.mcpClient = mcpClient;
+    public DatabaseController(List<McpAsyncClient> mcpClients) {
+        this.mcpClient = mcpClients.get(0);
     }
 
     @GetMapping("/tools")
